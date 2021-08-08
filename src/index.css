@@ -38,14 +38,13 @@ header {
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: blueviolet;
 }
 
 .header-button {
   padding: .6rem 2rem;
-  margin: .6rem .6rem;
+  margin: .6rem .6rem .6rem 0;
   border: 1px solid white;
-  background-color: rgba(173, 173, 173, 0.144);
+  background-color: transparent;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -66,11 +65,14 @@ header {
 .news-block {
   padding: 3rem;
   padding-right: 0;
-  background-color: chocolate;
+  background-color: white;
 }
 
 .news-card-block {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .join-class {
@@ -166,6 +168,11 @@ header {
   padding-left: 3rem;
 }
 
+.shop-text > a {
+  color: white;
+  text-decoration: none;
+}
+
 .footer-block {
   display: flex;
   flex-direction: column;
@@ -207,4 +214,45 @@ header {
   font-size: 14px;
   font-weight: 700;
   color: white;
+}
+
+.article-block {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  width: 20%;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.article-heading {
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.article-image {
+  width: 100%;
+}
+
+.article-tag {
+  padding: 1rem;
+}
+
+.article-tag-btn {
+  padding: .3rem;
+  border: 1px solid rgb(211, 211, 211);
+  background-color: transparent;
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.article-date {
+  padding: 1rem;
+  padding-top: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
