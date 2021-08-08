@@ -16,7 +16,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- HEADER -->
-    <header style="background-color: green; padding-bottom: 3rem;">
+    <header style="padding-bottom: 3rem;">
       <div class="header-class">
         <nav style="display: inline-block">
             <ul class="nav-ul">
@@ -29,10 +29,10 @@
           <img src="logo192.png" style="height: 100px;">
         </div>
         <div style="display: inline-block">
-          <a href="#" class="header-button">Shop</a>
+          <a href="#" class="header-button">Shop<strong>↗</strong></a>
         </div>
       </div>
-      <div class="big-text">
+      <div class="big-text header-text">
         Our club
       </div>
     </header>
@@ -46,11 +46,11 @@
     </div>
     <!-- JOIN US -->
     <div class="join-class">
-      <div class="join-text-blocks">
+      <div class="join-text-blocks join-element">
         <h1 class="large-header">Join us</h1>
         <div class="join-text">Sign up for our newsletter for exclusive insights, latest news, content and exciting offers!</div>
       </div>
-      <div class="form-card">
+      <div class="form-card join-element">
         <form style="margin: 2rem; 
         display: flex;
         flex-direction: column;">
@@ -65,13 +65,41 @@
         </div>
       </div>
     </div>
+    <script>
+      let joinBlockObserve = function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('showed-element');
+          }
+        });
+      }
+      let joinBlock = document.getElementsByClassName('join-element');
+      let joinObserver = new IntersectionObserver(joinBlockObserve,{threshold: 0.5});
+      for (let observer of joinBlock) {
+        joinObserver.observe(observer);
+      }
+    </script>
     <!-- SHOP -->
     <div class="shop-block">
-      <div class="big-text" style="width: 50%;">
+      <div class="big-text shop-element" style="width: 50%;">
         Our official shop
       </div>
-      <div class="shop-text">Visit now</div>
+      <div class="shop-text shop-element">Visit now</div>
     </div>
+    <script>
+      let shopObserve = function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('showed-element');
+          }
+        });
+      }
+      let shopBlock = document.getElementsByClassName('shop-element');
+      let shopObserver = new IntersectionObserver(shopObserve,{threshold: 0.5});
+      for (let observer of shopBlock) {
+        shopObserver.observe(observer);
+      }
+    </script>
     <!-- FOOTER -->
     <footer class="footer-block">
       <div class="footer-nav">
@@ -99,5 +127,25 @@
         &copy;My company • 2021
       </div>
     </footer>
+    <script>
+      const images = [
+          'url("https://steamuserimages-a.akamaihd.net/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")',
+          'url("https://i.pinimg.com/originals/95/a5/39/95a539b62ef9df0eed8c8b4f9821b3a5.jpg")',
+          'url("https://www.csgowallpapers.com/assets/images/original_compressed/mossawi_42907774553_20180125152221_733984732956.png")',
+          'url("https://cdn.sanity.io/images/ccckgjf9/production/d325e743ab06b3d996f3e9df5ed69ea6fb74b756-3840x2160.jpg?max-h=400&max-w=400&fit=scale&auto=format")',
+        ]
+      let i = 0;
+      function changeBg() {
+        const header = document.querySelector('header');
+        const bgImage = images[i];
+        if (i == 3)
+          i = 0;
+        else
+          i++;
+          header.style.backgroundImage = bgImage;
+      }
+
+      setInterval(changeBg, 3000);
+      </script>
   </body>
 </html>

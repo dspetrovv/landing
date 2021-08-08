@@ -12,12 +12,20 @@ code {
     monospace;
 }
 
+header {
+  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+  -webkit-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
 .header-class {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee;
+  color: white;
 }
 
 .nav-ul {
@@ -34,20 +42,25 @@ code {
 }
 
 .header-button {
-  padding: .6rem;
-  margin: .6rem .6rem 0 0;
-  border: 2px solid rgb(173, 173, 173);
+  padding: .6rem 2rem;
+  margin: .6rem .6rem;
+  border: 1px solid white;
   background-color: rgba(173, 173, 173, 0.144);
-  color: black;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .big-text {
   font-size: 6.5vw;
   font-weight: bold;
-  padding: 5rem 0 0 3rem;
-  background-color: red;
+  padding-left: 3rem;
+}
+
+.header-text {
+  padding-top: 15rem;
+  color: white;
 }
 
 .news-block {
@@ -84,6 +97,11 @@ code {
   font-size: 20px;
   font-weight: 600;
   color: white;
+}
+
+.join-element {
+  opacity: 0;
+  transform: translateX(-20%);
 }
 
 .form-card {
@@ -129,6 +147,17 @@ code {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.shop-element {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+
+.showed-element {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateX(0%);
 }
 
 .shop-text {
