@@ -43,6 +43,13 @@ code {
   text-transform: uppercase;
 }
 
+.big-text {
+  font-size: 6.5vw;
+  font-weight: bold;
+  padding: 5rem 0 0 3rem;
+  background-color: red;
+}
+
 .news-block {
   padding: 3rem;
   padding-right: 0;
@@ -57,23 +64,33 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 3rem;
+  padding: 100px 3rem 100px 3rem;
   background-color: darkslategray;
 }
 
+.join-text-blocks {
+  width: 500px;
+}
+
 .large-header {
-  font-size: 5vw;
+  font-size: 48px;
   font-weight: bold;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .join-text {
-  
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
 }
 
 .form-card {
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  width: 500px;
 }
 
 .join-form-input {
@@ -87,10 +104,12 @@ code {
   border: 1px solid rgb(173, 173, 173);
   text-transform: uppercase;
   background-color: transparent;
+  color: grey;
+  font-size: 18px;
 }
 
 .privacy-policy {
-  margin-top: 50px;
+  margin-top: 75px;
   font-size: 20px;
   color: grey;
 }
@@ -98,4 +117,65 @@ code {
 .privacy-policy > span > a {
   color: black;
   text-decoration: none;
+}
+
+.shop-block {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 80px;
+  color: white;
+  text-transform: uppercase;
+  background-image: url('https://assets-global.website-files.com/5f9bee46b9797ea7bdf87204/5f9bee46b9797e5914f8736e_pattern_001.jpg');
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.shop-text {
+  font-size: 24px;
+  margin-bottom: 100px;
+  padding-left: 3rem;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: darkslategray;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav-2 {
+  margin-left: 100px;
+}
+
+.footer-nav-1 > li > a {
+  font-size: 27px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav-2 > li > a {
+  font-size: 19px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright-block {
+  padding-top: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
 }
