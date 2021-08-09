@@ -3,17 +3,48 @@ import Article from './Article'
 
 function App() {
   const news = [
-    {id: 1, img: "https://cdn.sanity.io/images/ccckgjf9/production/d325e743ab06b3d996f3e9df5ed69ea6fb74b756-3840x2160.jpg?max-h=400&max-w=400&fit=scale&auto=format", photo: '', heading: "Here's some text blah blah blah", tag: "tag1", date: "August 9, 2021 •"},
-    {id: 2, img: "https://www.csgowallpapers.com/assets/images/original_compressed/mossawi_42907774553_20180125152221_733984732956.png", photo: '', heading: "Here's some text blah blah blah", tag: "tag2", date: "August 9, 2021 •"},
-    {id: 3, img: "https://i.pinimg.com/originals/95/a5/39/95a539b62ef9df0eed8c8b4f9821b3a5.jpg", photo: '', heading: "Here's some text blah blah blah", tag: "tag3", date: "August 9, 2021 •"},
-    {id: 4, img: "https://steamuserimages-a.akamaihd.net/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", photo: '', heading: "Here's some text blah blah blah", tag: "tag4", date: "August 9, 2021 •"},
-    {id: 5, img: "https://cdn.sanity.io/images/ccckgjf9/production/d325e743ab06b3d996f3e9df5ed69ea6fb74b756-3840x2160.jpg?max-h=400&max-w=400&fit=scale&auto=format", photo: '', heading: "Here's some text blah blah blah", tag: "tag3", date: "August 9, 2021 •"},
+    {
+      id: 1,
+      img: "https://images.unsplash.com/photo-1558433916-90a36b44753f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      heading: "New wallpaper pack released",
+      tag: "Shop",
+      date: "August 9, 2021 •"
+    },
+    {
+      id: 2,
+      img: "https://images.unsplash.com/photo-1572025442937-d55974d9815f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      heading: "We've moved to a new office",
+      tag: "Life",
+      date: "August 9, 2021 •"
+    },
+    {
+      id: 3,
+      img: "https://images.unsplash.com/photo-1615885656388-e0dc3a53c72d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      heading: "Results of the last championship",
+      tag: "Championships",
+      date: "August 9, 2021 •"
+    },
+    {
+      id: 4,
+      img: "https://images.unsplash.com/photo-1473040713884-6be5953eba5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      heading: "Video: 'Fun moments in training'",
+      tag: "Video",
+      date: "August 9, 2021 •"
+    },
+    {
+      id: 5,
+      img: "https://images.unsplash.com/photo-1543165057-6fbd4d3d3bcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+      heading: "New merch is already in our store!",
+      tag: "Shop",
+      date: "August 9, 2021 •"
+    },
   ];
 
   return (
     <div className="news-card-block">
       {news.map(article =>
-        <Article key={article.id}
+        <Article
+          key={article.id}
           heading={article.heading}
           tag={article.tag}
           date={article.date}

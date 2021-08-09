@@ -13,7 +13,7 @@ code {
 }
 
 header {
-  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+  background-image: url("https://images.unsplash.com/photo-1559136560-16ad036d85d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
   -webkit-transition: background-image 0.5s ease-in-out;
   transition: background-image 0.5s ease-in-out;
   background-position: 50% 50%;
@@ -35,9 +35,14 @@ header {
 .nav-ul > li {
   display: inline-block;
   padding: .5rem;
+}
+
+.nav-ul > li > a {
+  color: white;
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .header-button {
@@ -49,6 +54,24 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
+  transition: background-color 0.3s, border-color 0.3s ease-in-out;
+}
+
+.header-button:hover {
+  background-color: rgb(229, 71, 71);
+  border-color: rgb(229, 71, 71);
+}
+
+.news-button {
+  color: black;
+  border-color: rgb(211, 211, 211);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s ease-in-out;
+}
+
+.news-button:hover {
+  color: white;
+  border-color: rgb(229, 71, 71);
+  background-color: rgb(229, 71, 71);
 }
 
 .big-text {
@@ -119,6 +142,16 @@ header {
   margin-bottom: 10px;
 }
 
+input {
+  outline: none;
+}
+
+.join-form-input:focus {
+  outline: none !important;
+  border-color: rgb(229, 71, 71);
+  box-shadow: 0 0 .3rem .3rem rgb(229, 71, 71, .2);
+}
+
 .join-form-btn {
   padding: 10px;
   border: 1px solid rgb(173, 173, 173);
@@ -126,6 +159,13 @@ header {
   background-color: transparent;
   color: grey;
   font-size: 18px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s ease-in-out;
+}
+
+.join-form-btn:hover {
+  color: white;
+  background-color: rgb(229, 71, 71);
+  border-color: rgb(229, 71, 71);
 }
 
 .privacy-policy {
@@ -145,7 +185,7 @@ header {
   padding: 80px 0 80px;
   color: white;
   text-transform: uppercase;
-  background-image: url('https://assets-global.website-files.com/5f9bee46b9797ea7bdf87204/5f9bee46b9797e5914f8736e_pattern_001.jpg');
+  background-image: url('https://cdn.pixabay.com/photo/2018/01/21/21/48/sport-3097621_960_720.jpg');
   background-position: 50% 50%;
   background-attachment: fixed;
   background-size: cover;
@@ -219,6 +259,7 @@ header {
 .article-block {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-right: 40px;
   width: 20%;
   border: 1px solid rgb(211, 211, 211);
@@ -228,10 +269,12 @@ header {
   padding: 1rem;
   font-size: 18px;
   font-weight: 600;
+  flex-grow: 1;
 }
 
 .article-image {
   width: 100%;
+  height: 10vw;
 }
 
 .article-tag {
@@ -242,11 +285,16 @@ header {
   padding: .3rem;
   border: 1px solid rgb(211, 211, 211);
   background-color: transparent;
-  color: black;
+  color: rgb(229, 71, 71);
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.2s ease-in;
+}
+
+.article-tag-btn:hover {
+  color: black;
 }
 
 .article-date {
