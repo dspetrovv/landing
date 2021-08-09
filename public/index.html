@@ -11,22 +11,22 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <title>Table tennis club</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- HEADER -->
-    <header style="padding-bottom: 3rem;">
+    <header style="padding-bottom: 5rem;">
       <div class="header-class">
         <nav style="display: inline-block">
             <ul class="nav-ul">
-              <li><a href="#">Team</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Schedule</a></li>
+              <li><a href="#" class="nav-link">Team</a></li>
+              <li><a href="#" class="nav-link">News</a></li>
+              <li><a href="#" class="nav-link">Schedule</a></li>
             </ul>
         </nav>
         <div style="display: inline-block">
-          <img src="Table-tennis.png" style="height: 100px;">
+          <img src="Table-tennis-1.png" style="height: 100px;">
         </div>
         <div style="display: inline-block">
           <a href="#" class="header-button">Shop<strong>↗</strong></a>
@@ -81,12 +81,14 @@
     </script>
     <!-- SHOP -->
     <div class="shop-block">
-      <div class="big-text shop-element" style="width: 50%;">
-        Our official shop
-      </div>
-      <div class="shop-text shop-element">
-        <a href="#">Visit now<strong>↗</strong></a>
-      </div>
+      <a href="#" class="shop-link">
+        <div class="big-text shop-element" style="width: 50%;">
+          Our official shop
+        </div>
+        <div class="shop-text shop-element">
+          Visit now<strong>↗</strong>
+        </div>
+      </a>
     </div>
     <script>
       let shopObserve = function(entries) {
@@ -122,19 +124,21 @@
           <ul class="footer-list footer-nav-2">
             <li><a href="#">VK</a></li>
             <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
           </ul>
         </nav>
       </div>
       <div class="copyright-block">
-        &copy;My company • 2021
+        &copy;My company • 2021 | My <a href="#" style="color: red;">GitHub</a>
       </div>
     </footer>
     <script>
       const images = [
-          'url("https://images.pexels.com/photos/4114727/pexels-photo-4114727.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")',
-          'url("https://images.unsplash.com/photo-1461748659110-16121c049d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80")',
-          'url("https://images.unsplash.com/photo-1523221746585-396fbfea5033?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80")',
-          'url("https://images.unsplash.com/photo-1559136560-16ad036d85d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80")',
+          'url("./Bg-images/image-2.png")',
+          'url("./Bg-images/image-3.png")',
+          'url("./Bg-images/Students.png")',
+          'url("./Bg-images/image-1.png")',
         ]
       let i = 0;
       function changeBg() {
