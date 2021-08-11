@@ -1,9 +1,11 @@
+import React, { Fragment, Suspense } from 'react'
 import './index.css'
+import Loader from './Loader'
 
 export default function Article( {heading, tag, date, img} ) {
 
     return (
-        <div className="article-block">
+        <Fragment>
             <a href="#">
                 <img
                     src={img}
@@ -17,6 +19,6 @@ export default function Article( {heading, tag, date, img} ) {
             <div className="article-date">
                 {date}
             </div>
-        </div>
+        </Fragment>
     )
 }

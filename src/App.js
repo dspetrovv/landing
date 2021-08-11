@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import Article from './Article'
+import Loader from './Loader'
+import './index.css'
 
 function App() {
   const news = [
@@ -39,18 +41,44 @@ function App() {
       date: "August 9, 2021 •"
     },
   ];
+  
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  /*useEffect(() => {
+    fetch("https://diplomprjc.herokuapp.com/api/currencies")
+      .then(response => {
+        let resp = null;
+        if (response.status !== 200) {
+          resp = Promise.reject(new Error(response.statusText))
+        } else
+          resp = Promise.resolve(response); return resp}
+      ).then((resp) => {
+        let farm = new Array(5)
+        farm = news;
+        console.log(farm)
+        setTimeout(() => {
+          console.log('timedout');
+          
+        setIsLoaded(true)
+        },5000)
+        return resp.json()
+      }).then(resp => {console.log(resp)}).catch(e => console.log('err: ',e))
+  },[])*/
 
   return (
     <div className="news-card-block">
-      {news.map(article =>
-        <Article
-          key={article.id}
-          heading={article.heading}
-          tag={article.tag}
-          date={article.date}
-          img={article.img}
-        />
-        )}
+      {news.map(article => (
+        <div className="article-block" key={article.id}>{
+          isLoaded ? (
+            <Article
+              key={article.id}
+              heading={article.heading}
+              tag={article.tag}
+              date={article.date}
+              img={article.img}
+            />) : <Loader key={article.id} />}
+        </div>
+        ))}
     </div>
   );
 }
