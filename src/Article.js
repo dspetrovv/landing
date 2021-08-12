@@ -1,6 +1,5 @@
-import React, { Fragment, Suspense } from 'react'
+import React, { Fragment } from 'react'
 import './index.css'
-import Loader from './Loader'
 
 export default function Article( {heading, tag, date, img} ) {
 
