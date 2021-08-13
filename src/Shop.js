@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import { useIntersect } from "./Hooks/useIntersect"
 import './index.css'
 
@@ -7,8 +6,8 @@ export const Shop = () => {
     const intersectionTwo = useIntersect()
 
     return (
-        <div className="shop-block">
-            <a href="#" className="shop-link">
+        <div className="shop-block" style={{backgroundImage: 'url("' + process.env.PUBLIC_URL + '/Images/Shop.png")'}}>
+            <a href="/#" className="shop-link">
                 <div
                     className="big-text shop-element"
                     style={{width: "50%"}}

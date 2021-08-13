@@ -30,7 +30,7 @@ export const Join = () => {
                 <div className="privacy-policy">
                 See our
                     <span>
-                        <a href="#">Privacy Policy</a>
+                        <a href="/#">&nbsp;Privacy Policy</a>
                     </span>
                 </div>
             </div>
