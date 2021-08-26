@@ -25,18 +25,20 @@ export const Header = () => {
     return (
         <header ref={headerRef} style={{paddingBottom: '5rem',backgroundImage: 'url("' + process.env.PUBLIC_URL + '/Images/image-1.png")'}}>
             <div className="header-class">
-                <nav style={{display: "inline-block"}}>
+                <div className="nav-burger">
+                    <span />
+                </div>
+                <nav className="header-nav">
                     <ul className="nav-ul">
                         <li><a href="/#" className="nav-link">Team</a></li>
                         <li><a href="/#" className="nav-link">News</a></li>
                         <li><a href="/#" className="nav-link">Gallery</a></li>
                     </ul>
                 </nav>
-                <div style={{display: "inline-block"}}>
+                <div className="header-image">
                     <a href="/#">
                         <img
                             src={process.env.PUBLIC_URL + "/Images/Table-tennis.png"}
-                            style={{height: "100px"}}
                             alt={'Table-tennis'}
                         />
                     </a>

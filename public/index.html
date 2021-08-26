@@ -9,15 +9,21 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script>
-      //fetch("https://diplomprjc.herokuapp.com/api/currencies").then(response => {let resp = null; if (response.status !== 200) {resp = Promise.reject(new Error(response.statusText))} else resp = Promise.resolve(response); return resp}).then((resp) => {alert(1); console.log(resp.json())}).catch(e => console.log('err: ',e))
-    </script>
     <title>Table tennis club</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      $(document).ready(function(event) {
+        $('.nav-burger').click(function(event) {
+          $('.nav-burger,.header-nav').toggleClass('active');
+          $('body').toggleClass('locked');
+        })
+      })
+    </script>
   </body>
 </html>

@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="footer-block">
             <div className="footer-nav">
-                <nav style={{display: "flex", flexDirection: "row"}}>
+                <nav className="footer-nav">
                     <ul className="footer-list footer-nav-1">
                         <li><a href="/#">Team</a></li>
                         <li><a href="/#">News</a></li>
